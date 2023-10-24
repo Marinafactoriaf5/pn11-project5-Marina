@@ -1,55 +1,47 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
+import './productos.json'
 
 function Catalog() {
-    const [products, setProducts] = useState([]);
-    const [loading, setLoading] = useState(true);
-  
-    useEffect(() => {
-      fetch('https://fakestoreapi.com/products')
-        .then((response) => response.json())
-        .then((data) => {
-          setProducts(data);
-          setLoading(false);
-        })
-        .catch((error) => {
-          console.error('Error en la solicitud fetch:', error);
-          setLoading(false);
-        });
-    }, []);
-  
-    const productsByCategory = {};
-    products.forEach((product) => {
-      if (!productsByCategory[product.category]) {
-        productsByCategory[product.category] = [];
+  const [productData, setProductData] = useState({});
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('./productos.json'); 
+        if (!response.ok) {
+          throw new Error('No se pudo cargar el archivo JSON.');
+        }
+        const data = await response.json();
+        setProductData(data);
+      } catch (error) {
+        console.error('Error al cargar el archivo JSON:', error);
       }
-      productsByCategory[product.category].push(product);
-    });
-  
-    return (
-      <div>
-        {loading ? (
-          <p>Cargando...</p>
-        ) : (
-          <div>
-            {Object.keys(productsByCategory).map((category) => (
-              <div key={category}>
-                <h2>{category}</h2>
-                <ul>
-                  {productsByCategory[category].map((product) => (
-                    <li key={product.id}>
-                      <img src={product.image} alt={product.title} />
-                      <h3>{product.title}</h3>
-                      <p>Precio: ${product.price}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+    };
+
+    fetchData();
+  }, []);
+
+  return (
+    <div>
+      <h1>Catálogo de Productos</h1>
+      {Object.keys(productData).map((categoria) => (
+        <div key={categoria}>
+          <h2>{categoria}</h2>
+          <ul>
+            {productData[categoria].map((product, index) => (
+              <li key={index}>
+                <img src={product.imagen} alt={product.nombre} />
+                <h3>{product.nombre}</h3>
+                <p>Precio: ${product.precio}</p>
+              </li>
             ))}
-          </div>
-        )}
-      </div>
-    );
-  }
-  
-  export default Catalog;
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Catalog;
+
