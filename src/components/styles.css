@@ -5,27 +5,36 @@
     display: grid;
     background-color: #0082c3;
     list-style: none;
-    height: 80px;
+    height: 65px;
     width:auto;
-    flex-direction: row;
-
 }
 
 ul{
     display: flex;
     list-style: none;
+    margin-top: 20px;
     
 }
 
-li{ 
+h2{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+a{ 
     font-family: 'Roboto', sans-serif;
     color: white;
-    margin: 15px;
-
+    margin-right: 20px;
+    text-decoration: none;
 }
 
 .logo{
     height: 40px;
     width: 160px;
-    margin: 15px;
+    margin-right: 40px;
+    margin-top: -10px;
+}
+
+.hero{
+    width: 1425px;
 }

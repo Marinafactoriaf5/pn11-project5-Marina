@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.css';
-import Logo from '../assets/logo.png'; 
+import Logo from '../assets/logo.png';
 
 function Menu() {
   return (
     <div className="menu">
       <ul>
-      <img class="logo" src={Logo} alt="Decathlon logo" />
+        <img class="logo" src={Logo} alt="Decathlon logo" />
         <li><a href="#">Deportes</a></li>
         <li><a href="#">Mujer</a></li>
         <li><a href="#">Hombre</a></li>
@@ -17,6 +17,6 @@ function Menu() {
       </ul>
     </div>
   );
-  } 
-
+}
+  
   export default Menu;
