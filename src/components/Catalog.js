@@ -29,7 +29,7 @@ function Catalog() {
                 <h2>TOP VENTAS</h2>
                 <ul class="carousel">
                     {productData.products.map((product, index) => (
-                        <li key={index}>
+                        <li class="card" key={index}>
                             <img class="imageProduct" src={product.imagen} alt={product.nombre} />
                             <p id="precio">{product.precio} €</p>
                             <p>{product.nombre}</p>
