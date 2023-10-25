@@ -1,40 +1,78 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.menu{
+.menu {
     display: grid;
     background-color: #0082c3;
     list-style: none;
     height: 65px;
-    width:auto;
+    width: auto;
 }
 
-ul{
+ul {
     display: flex;
     list-style: none;
     margin-top: 20px;
-    
+
 }
 
-h2{
+h2 {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
 }
 
-a{ 
+a {
     font-family: 'Roboto', sans-serif;
     color: white;
     margin-right: 20px;
     text-decoration: none;
 }
 
-.logo{
+.logo {
     height: 40px;
     width: 160px;
     margin-right: 40px;
     margin-top: -10px;
 }
 
-.hero{
+.hero {
     width: 1425px;
 }
+
+.footer {
+    height: 200px;
+    width: auto;
+    background-color: #0082c3;
+}
+
+.imageProduct {
+    height: 300px;
+    object-fit: cover;
+    border-radius: 3px;
+    border-width: 2px;
+    border-color: black;
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: visible;
+    overflow-y: hidden;
+}
+
+h3, h2, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+#precio{
+    background-color: #ffea28;
+    border-radius: 3px;
+    padding-left: 20px;
+    padding: 5px;
+    width: 58px;
+}
+

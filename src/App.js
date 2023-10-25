@@ -3,6 +3,7 @@ import './App.css';
 import Menu from './components/Menu.js';
 import Hero from './components/Hero.js';
 import Catalog from './components/Catalog';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Menu />
       <Hero />
       <Catalog />
+      <Footer />
     </div>
   );
 }
