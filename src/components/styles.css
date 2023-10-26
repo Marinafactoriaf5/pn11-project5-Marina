@@ -2,10 +2,13 @@
 
 .menu {
     display: grid;
-    background-color: #0082c3;
+    background-color: white;
     list-style: none;
     height: 65px;
     width: 100%;
+    position: fixed;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 ul {
@@ -23,7 +26,7 @@ h2 {
 
 a {
     font-family: 'Roboto Condensed', sans-serif;
-    color: white;
+    color: black;
     margin-right: 40px;
     text-decoration: none;
 }
@@ -132,6 +135,7 @@ p {
 h1 {
     display: flex;
     position: absolute;
+    z-index: 0;
     color: white;
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 96px;

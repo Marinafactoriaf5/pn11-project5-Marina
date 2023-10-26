@@ -5,6 +5,7 @@ import Hero from './components/Hero.js';
 import Catalog from './components/Catalog';
 import Footer from './components/Footer';
 import '@fontsource/roboto';
+import Subcatalog from './components/Subcatalog';
 
 function App() {
   return (
