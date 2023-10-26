@@ -4,6 +4,7 @@ import Menu from './components/Menu.js';
 import Hero from './components/Hero.js';
 import Catalog from './components/Catalog';
 import Footer from './components/Footer';
+import '@fontsource/roboto';
 
 function App() {
   return (

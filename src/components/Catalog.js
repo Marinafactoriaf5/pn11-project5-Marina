@@ -26,7 +26,7 @@ function Catalog() {
     return (
         <div>
             <div key="products">
-                <h2>TOP VENTAS</h2>
+                <h2 class="topVentas">TOP VENTAS</h2>
                 <ul class="carousel">
                     {productData.products.map((product, index) => (
                         <li class="card" key={index}>
