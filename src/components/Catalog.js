@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './styles.css';
 
-const URL = "http://localhost:3000/products";
+const URL = "https://deca-api-server-c2ce4a810fea.herokuapp.com/articles";
 
 function Catalog() {
     const [productData, setProductData] = useState({ products: [] });
@@ -30,9 +30,9 @@ function Catalog() {
                 <ul class="carousel">
                     {productData.products.map((product, index) => (
                         <li class="card" key={index}>
-                            <img class="imageProduct" src={product.imagen} alt={product.nombre} />
-                            <p id="precio">{product.precio} €</p>
-                            <p>{product.nombre}</p>
+                            <img class="imageProduct" src={product.poster_img} alt={product.name} />
+                            <p id="precio">{product.price} €</p>
+                            <p>{product.name}</p>
                         </li>
                     ))}
                 </ul>
